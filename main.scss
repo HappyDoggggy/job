@@ -1,0 +1,166 @@
+body {
+    margin: 0 auto;
+    background-color: rgb(204, 211, 202);
+    width: 100vw;
+    height: 100vh;
+
+    .top {
+        width: 80vw;
+        height: 40vh;
+        display: flex;
+        margin: auto;
+        margin-top: 60px;
+
+        // background-color: rgb(238, 211, 217);
+        .photo {
+            width: 30vw;
+            height: 40vh;
+            background-color: rgb(238, 211, 217);
+        }
+
+        .intro {
+            width: 50vw;
+            height: 40vh;
+            background-color: rgb(238, 211, 217);
+            margin-left: 60px;
+
+            .me {
+                font-size: 16pt;
+                margin-left: 60px;
+                margin-bottom: 10px;
+            }
+
+            .job {
+                font-size: 16pt;
+                margin-left: 60px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .second {
+        width: 80vw;
+        height: 40vh;
+        background-color: rgb(245, 232, 221);
+        margin: 0 auto;
+        margin-top: 40px;
+        h1{
+            margin-left: 80px;
+        }
+        body {
+            min-width: 500px;
+            margin-top: 50px;
+        }
+
+        /* ---- Timeline ---- */
+        ol {
+            position: relative;
+            display: block;
+            margin: 100px;
+            height: 4px;
+            background: #31708F;
+        }
+
+        ol::before,
+        ol::after {
+            content: "";
+            position: absolute;
+            top: -8px;
+            display: block;
+            width: 0;
+            height: 0;
+            border-radius: 10px;
+            border: 10px solid #31708F;
+        }
+
+        ol::before {
+            left: -5px;
+        }
+
+        ol::after {
+            right: -10px;
+            border: 10px solid transparent;
+            border-right: 0;
+            border-left: 20px solid #31708F;
+            border-radius: 3px;
+        }
+
+        /* ---- Timeline elements ---- */
+        li {
+            position: relative;
+            display: inline-block;
+            float: left;
+            width: 150px;
+            font: bold 15px arial;
+            height: 40px;
+        }
+
+        li .diplome {
+            position: absolute;
+            top: -76px;
+            left: 30%;
+            color: #000000;
+        }
+
+        li .point {
+            content: "";
+            top: -4px;
+            left: 43%;
+            display: block;
+            width: 6px;
+            height: 6px;
+            border: 4px solid #31708F;
+            border-radius: 10px;
+            background: #fff;
+            position: absolute;
+        }
+
+        li .description {
+            display: none;
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-top: 20px;
+            position: relative;
+            font-weight: normal;
+            z-index: 1;
+        }
+
+        .description::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #f4f4f4;
+            position: absolute;
+            top: -5px;
+            left: 43%;
+        }
+
+        /* ---- Hover effects ---- */
+        li:hover {
+            cursor: pointer;
+            color: #48A4D2;
+        }
+
+        li:hover .description {
+            display: block;
+        }
+    }
+
+    .third {
+        width: 80vw;
+        height: 250vh;
+        background-color: rgb(238, 211, 217);
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .footer {
+        width: 100vw;
+        height: 30vh;
+        margin: 0 auto;
+        margin-top: 40px;
+        background-color: rgb(245, 232, 221);
+    }
+}
